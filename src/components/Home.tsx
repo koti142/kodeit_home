@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDarkMode } from '../contexts/DarkModeContext';
-import chetanSehgal from '../assets/chetan-sehgal.jpg';
+import chetanSehgal from '../assets/chetan-sehgal.png';
 import { 
   BookOpen, 
   Users, 
