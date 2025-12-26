@@ -41,7 +41,7 @@ function Home() {
       {/* Hero Section */}
       <section 
         id="hero" 
-        className="relative pt-24 pb-20 px-6 overflow-hidden min-h-screen flex items-center"
+        className="relative pt-24 pb-20 overflow-hidden min-h-screen flex items-center"
         style={{
           background: darkMode 
             ? 'radial-gradient(ellipse at top left, rgba(255, 215, 0, 0.15) 0%, rgba(255, 140, 0, 0.2) 25%, rgba(34, 139, 34, 0.25) 50%, rgba(30, 144, 255, 0.2) 75%, rgba(255, 215, 0, 0.1) 100%), linear-gradient(135deg, #1C1917 0%, #2D1B0E 100%)'
@@ -56,8 +56,8 @@ function Home() {
           <div className="w-2 bg-green-500/20 ml-2"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto relative z-10 w-full">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-[1600px] mx-auto relative z-10 px-3">
+          <div className="grid md:grid-cols-2 gap-6 items-center">
             {/* Left Side - Text Content */}
             <div className={`relative z-20 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
               {/* Logo/Brand */}
@@ -76,7 +76,7 @@ function Home() {
               </p>
 
               {/* CTA Button */}
-              <button className={`px-8 py-4 border-2 font-semibold transition-all duration-300 mb-12 ${
+              <button className={`px-4 py-4 border-2 font-semibold transition-all duration-300 mb-12 ${
                 darkMode 
                   ? 'border-white text-white hover:bg-white hover:text-orange-600' 
                   : 'border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white'
@@ -165,7 +165,7 @@ function Home() {
       {/* In the News Section */}
       <section 
         id="news" 
-        className="relative py-20 px-6 overflow-hidden"
+        className="relative py-20 overflow-hidden"
         style={{
           background: darkMode 
             ? 'radial-gradient(ellipse at center, rgba(34, 197, 94, 0.15) 0%, rgba(255, 215, 0, 0.2) 30%, rgba(59, 130, 246, 0.15) 60%, rgba(34, 197, 94, 0.1) 100%), #0F172A'
@@ -188,8 +188,8 @@ function Home() {
           }}
         ></div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid md:grid-cols-2 gap-8">
+        <div className="max-w-[1600px] mx-auto relative z-10 px-3">
+          <div className="grid md:grid-cols-2 gap-4">
             {/* Left Section - In the News */}
             <div 
               className="p-8 md:p-12 rounded-2xl relative overflow-hidden"
@@ -357,7 +357,7 @@ function Home() {
       {/* Success Stories / Case Studies Section */}
       <section 
         id="case-studies" 
-        className="relative py-20 px-6 overflow-hidden"
+        className="relative py-20 overflow-hidden"
         style={{
           background: darkMode 
             ? 'radial-gradient(ellipse at bottom right, rgba(255, 215, 0, 0.15) 0%, rgba(255, 140, 0, 0.2) 30%, rgba(34, 139, 34, 0.25) 60%, rgba(30, 144, 255, 0.2) 100%), #9A3412'
@@ -372,7 +372,7 @@ function Home() {
           <div className="w-3 bg-gradient-to-b from-green-500/20 to-blue-500/20"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="w-full relative z-10 px-3">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               Success Stories
@@ -382,7 +382,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-4">
             {[
               {
                 title: "Digital Transformation Journey",
@@ -419,14 +419,14 @@ function Home() {
       {/* About KODEIT & Philosophy */}
       <section 
         id="about" 
-        className="py-20 px-6"
+        className="py-20 px-3"
         style={{
           background: darkMode 
             ? 'radial-gradient(ellipse at top right, rgba(255, 215, 0, 0.1) 0%, rgba(255, 140, 0, 0.15) 30%, rgba(34, 139, 34, 0.2) 60%, rgba(30, 144, 255, 0.15) 100%), #1F2937'
             : 'radial-gradient(ellipse at top right, rgba(255, 215, 0, 0.15) 0%, rgba(255, 140, 0, 0.2) 30%, rgba(34, 139, 34, 0.25) 60%, rgba(30, 144, 255, 0.2) 100%), linear-gradient(135deg, #FEF9E7 0%, #FFF7ED 50%, #F0FDF4 100%)' // Light with all logo colors
         }}
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1600px] mx-auto px-3">
           <div className="text-center mb-12">
             <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${
               darkMode ? 'text-white' : 'text-gray-900'
@@ -444,7 +444,7 @@ function Home() {
           <div className={`rounded-2xl p-8 md:p-10 mb-8 ${
             darkMode ? 'bg-gray-800/50 border border-gray-700' : 'bg-white border border-gray-200'
           } shadow-xl backdrop-blur-sm`}>
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="grid md:grid-cols-2 gap-4 items-center">
               {/* Left: Image */}
               <div className="relative overflow-hidden rounded-xl group">
                 <img 
@@ -487,7 +487,7 @@ function Home() {
           <div className={`rounded-2xl p-8 md:p-10 ${
             darkMode ? 'bg-gray-800/50 border border-gray-700' : 'bg-white border border-gray-200'
           } shadow-xl backdrop-blur-sm`}>
-            <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8">
+            <div className="flex flex-col md:flex-row items-start gap-6 md:gap-4">
               {/* Left: CEO Photo */}
               <div className="flex-shrink-0 mx-auto md:mx-0">
                 <div className="relative">
@@ -523,14 +523,14 @@ function Home() {
       {/* Why KODEIT - Value Proposition */}
       <section 
         id="features" 
-        className="py-20 px-6"
+        className="py-20 px-3"
         style={{
           background: darkMode 
             ? 'radial-gradient(ellipse at bottom left, rgba(255, 215, 0, 0.1) 0%, rgba(255, 140, 0, 0.15) 30%, rgba(34, 139, 34, 0.2) 60%, rgba(30, 144, 255, 0.15) 100%), #111827'
             : 'radial-gradient(ellipse at bottom left, rgba(255, 215, 0, 0.12) 0%, rgba(255, 140, 0, 0.18) 30%, rgba(34, 139, 34, 0.22) 60%, rgba(30, 144, 255, 0.18) 100%), linear-gradient(135deg, #FFFFFF 0%, #FFFBEB 50%, #F0FDF4 100%)' // Light with all logo colors
         }}
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1600px] mx-auto px-3">
           <div className="text-center mb-16">
             <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${
               darkMode ? 'text-white' : 'text-gray-900'
@@ -544,7 +544,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-4 mb-16">
             {/* Engage Students */}
             <div 
               className="group p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 border"
@@ -682,31 +682,31 @@ function Home() {
       {/* Access Your Dashboard */}
       <section 
         id="dashboard" 
-        className="relative py-20 px-6 overflow-hidden"
+        className="relative py-20 overflow-hidden"
         style={{
           background: darkMode 
             ? 'radial-gradient(ellipse at center, rgba(255, 215, 0, 0.1) 0%, rgba(255, 140, 0, 0.15) 30%, rgba(34, 139, 34, 0.2) 60%, rgba(30, 144, 255, 0.15) 100%), #1F2937'
             : 'radial-gradient(ellipse at center, rgba(255, 215, 0, 0.15) 0%, rgba(255, 140, 0, 0.2) 30%, rgba(34, 139, 34, 0.25) 60%, rgba(30, 144, 255, 0.2) 100%), linear-gradient(135deg, #FEF9E7 0%, #FFF7ED 50%, #F0FDF4 75%, #EFF6FF 100%)' // Light with all logo colors
         }}
       >
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-12">
-            <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${
+        <div className="max-w-[1600px] mx-auto relative z-10 px-3 sm:px-4 lg:px-4">
+          <div className="text-center mb-16">
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-4 ${
               darkMode ? 'text-white' : 'text-gray-900'
             }`}>
               Access Your Dashboard
             </h2>
-            <p className={`text-xl ${
+            <p className={`text-lg sm:text-xl ${
               darkMode ? 'text-white/90' : 'text-gray-700'
             }`}>
               Select your role to continue.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-4 max-w-[1400px] mx-auto">
             {/* Teacher Dashboard */}
             <div 
-              className="group relative backdrop-blur-sm rounded-2xl p-6 shadow-2xl border-2 transition-all duration-500 hover:scale-105 hover:shadow-green-500/50 overflow-hidden"
+              className="group relative backdrop-blur-sm rounded-2xl p-6 sm:p-7 lg:p-8 shadow-2xl border-2 transition-all duration-500 hover:scale-105 hover:shadow-green-500/50 overflow-hidden flex flex-col h-full"
               style={{
                 background: darkMode 
                   ? 'rgba(17, 24, 39, 0.95)' 
@@ -751,12 +751,12 @@ function Home() {
               }`}>
                 Teacher Dashboard
               </h3>
-              <p className={`text-sm mb-5 leading-relaxed ${
+              <p className={`text-sm sm:text-base mb-5 leading-relaxed flex-grow ${
                 darkMode ? 'text-gray-300' : 'text-gray-700'
               }`}>
                 Manage classes, track student progress, and deliver engaging lessons.
               </p>
-              <div className="mb-5 space-y-2.5">
+              <div className="mb-6 space-y-2.5 flex-grow">
                 <div className={`flex items-center gap-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1 ${
                   darkMode ? 'text-gray-400' : 'text-gray-600'
                 }`}>
@@ -789,7 +789,7 @@ function Home() {
 
             {/* Parent Dashboard */}
             <div 
-              className="group relative backdrop-blur-sm rounded-2xl p-6 shadow-2xl border-2 transition-all duration-500 hover:scale-105 hover:shadow-cyan-500/50 overflow-hidden"
+              className="group relative backdrop-blur-sm rounded-2xl p-6 sm:p-7 lg:p-8 shadow-2xl border-2 transition-all duration-500 hover:scale-105 hover:shadow-cyan-500/50 overflow-hidden flex flex-col h-full"
               style={{
                 background: darkMode 
                   ? 'rgba(17, 24, 39, 0.95)' 
@@ -834,12 +834,12 @@ function Home() {
               }`}>
                 Parent Dashboard
               </h3>
-              <p className={`text-sm mb-5 leading-relaxed ${
+              <p className={`text-sm sm:text-base mb-5 leading-relaxed flex-grow ${
                 darkMode ? 'text-gray-300' : 'text-gray-700'
               }`}>
                 Monitor your child's progress, view reports, and stay engaged with their learning journey.
               </p>
-              <div className="mb-5 space-y-2.5">
+              <div className="mb-6 space-y-2.5 flex-grow">
                 <div className={`flex items-center gap-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1 ${
                   darkMode ? 'text-gray-400' : 'text-gray-600'
                 }`}>
@@ -872,7 +872,7 @@ function Home() {
 
             {/* Student Dashboard */}
             <div 
-              className="group relative backdrop-blur-sm rounded-2xl p-6 shadow-2xl border-2 transition-all duration-500 hover:scale-105 hover:shadow-orange-500/50 overflow-hidden"
+              className="group relative backdrop-blur-sm rounded-2xl p-6 sm:p-7 lg:p-8 shadow-2xl border-2 transition-all duration-500 hover:scale-105 hover:shadow-orange-500/50 overflow-hidden flex flex-col h-full"
               style={{
                 background: darkMode 
                   ? 'rgba(17, 24, 39, 0.95)' 
@@ -917,12 +917,12 @@ function Home() {
               }`}>
                 Student Dashboard
               </h3>
-              <p className={`text-sm mb-5 leading-relaxed ${
+              <p className={`text-sm sm:text-base mb-5 leading-relaxed flex-grow ${
                 darkMode ? 'text-gray-300' : 'text-gray-700'
               }`}>
                 Access your courses, track your progress, and complete interactive learning activities.
               </p>
-              <div className="mb-5 space-y-2.5">
+              <div className="mb-6 space-y-2.5 flex-grow">
                 <div className={`flex items-center gap-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1 ${
                   darkMode ? 'text-gray-400' : 'text-gray-600'
                 }`}>
@@ -959,14 +959,14 @@ function Home() {
       {/* Spiral Learning Methodology */}
       <section 
         id="methodology" 
-        className="py-20 px-6"
+        className="py-20 px-3"
         style={{
           background: darkMode 
             ? 'radial-gradient(ellipse at center, rgba(255, 215, 0, 0.1) 0%, rgba(255, 140, 0, 0.15) 30%, rgba(34, 139, 34, 0.2) 60%, rgba(30, 144, 255, 0.15) 100%), #1F2937'
             : 'radial-gradient(ellipse at center, rgba(255, 215, 0, 0.15) 0%, rgba(255, 140, 0, 0.2) 30%, rgba(34, 139, 34, 0.25) 60%, rgba(30, 144, 255, 0.2) 100%), linear-gradient(135deg, #FEF9E7 0%, #FFF7ED 50%, #F0FDF4 75%, #EFF6FF 100%)' // Light with all logo colors
         }}
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1600px] mx-auto px-3">
           <div className="text-center mb-16">
             <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${
               darkMode ? 'text-white' : 'text-gray-900'
@@ -980,7 +980,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
             {/* Foundation Stage */}
             <div className={`group relative p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 ${
               darkMode ? 'bg-gradient-to-br from-blue-900/50 to-indigo-900/50 border border-blue-700/30' : 'bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200'
@@ -1079,14 +1079,14 @@ function Home() {
       {/* Interactive Learning Universe */}
       <section 
         id="learning" 
-        className="py-20 px-6"
+        className="py-20 px-3"
         style={{
           background: darkMode 
             ? 'radial-gradient(ellipse at top left, rgba(255, 215, 0, 0.1) 0%, rgba(255, 140, 0, 0.15) 30%, rgba(34, 139, 34, 0.2) 60%, rgba(30, 144, 255, 0.15) 100%), #111827'
             : 'radial-gradient(ellipse at top left, rgba(255, 215, 0, 0.12) 0%, rgba(255, 140, 0, 0.18) 30%, rgba(34, 139, 34, 0.22) 60%, rgba(30, 144, 255, 0.18) 100%), linear-gradient(135deg, #FFFFFF 0%, #FFFBEB 50%, #F0FDF4 100%)' // Light with all logo colors
         }}
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1600px] mx-auto px-3">
           <div className="text-center mb-16">
             <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${
               darkMode ? 'text-white' : 'text-gray-900'
@@ -1218,7 +1218,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4">
             <div className="relative overflow-hidden rounded-xl group shadow-xl">
               <img 
                 src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800&h=600&fit=crop" 
@@ -1275,14 +1275,14 @@ function Home() {
       {/* Curriculum Overview */}
       <section 
         id="curriculum" 
-        className="py-20 px-6"
+        className="py-20 px-3"
         style={{
           background: darkMode 
             ? 'radial-gradient(ellipse at bottom right, rgba(255, 215, 0, 0.1) 0%, rgba(255, 140, 0, 0.15) 30%, rgba(34, 139, 34, 0.2) 60%, rgba(30, 144, 255, 0.15) 100%), #111827'
             : 'radial-gradient(ellipse at bottom right, rgba(255, 215, 0, 0.12) 0%, rgba(255, 140, 0, 0.18) 30%, rgba(34, 139, 34, 0.22) 60%, rgba(30, 144, 255, 0.18) 100%), linear-gradient(135deg, #FFFFFF 0%, #FFFBEB 50%, #F0FDF4 100%)' // Light with all logo colors
         }}
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1600px] mx-auto px-3">
           <div className="text-center mb-16">
             <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${
               darkMode ? 'text-white' : 'text-gray-900'
@@ -1296,7 +1296,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
             <div className={`p-8 rounded-xl shadow-xl ${
               darkMode ? 'bg-gray-800' : 'bg-gradient-to-br from-blue-50 to-purple-50'
             }`}>
@@ -1428,14 +1428,14 @@ function Home() {
       {/* Technology Ecosystem */}
       <section 
         id="ecosystem" 
-        className="py-20 px-6"
+        className="py-20 px-3"
         style={{
           background: darkMode 
             ? 'radial-gradient(ellipse at center, rgba(255, 215, 0, 0.1) 0%, rgba(255, 140, 0, 0.15) 30%, rgba(34, 139, 34, 0.2) 60%, rgba(30, 144, 255, 0.15) 100%), #1F2937'
             : 'radial-gradient(ellipse at center, rgba(255, 215, 0, 0.15) 0%, rgba(255, 140, 0, 0.2) 30%, rgba(34, 139, 34, 0.25) 60%, rgba(30, 144, 255, 0.2) 100%), linear-gradient(135deg, #FEF9E7 0%, #FFF7ED 50%, #F0FDF4 75%, #EFF6FF 100%)' // Light with all logo colors
         }}
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1600px] mx-auto px-3">
           <div className="text-center mb-16">
             <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${
               darkMode ? 'text-white' : 'text-gray-900'
@@ -1449,7 +1449,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-4 mb-12">
             <div className={`p-8 rounded-xl shadow-xl ${
               darkMode ? 'bg-gray-700' : 'bg-white'
             }`}>
@@ -1578,14 +1578,14 @@ function Home() {
       {/* Global Reach and Accessibility */}
       <section 
         id="global" 
-        className="py-20 px-6"
+        className="py-20 px-3"
         style={{
           background: darkMode 
             ? 'radial-gradient(ellipse at top right, rgba(255, 215, 0, 0.1) 0%, rgba(255, 140, 0, 0.15) 30%, rgba(34, 139, 34, 0.2) 60%, rgba(30, 144, 255, 0.15) 100%), #111827'
             : 'radial-gradient(ellipse at top right, rgba(255, 215, 0, 0.12) 0%, rgba(255, 140, 0, 0.18) 30%, rgba(34, 139, 34, 0.22) 60%, rgba(30, 144, 255, 0.18) 100%), linear-gradient(135deg, #FFFFFF 0%, #FFFBEB 50%, #F0FDF4 100%)' // Light with all logo colors
         }}
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1600px] mx-auto px-3">
           <div className="text-center mb-16">
             <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${
               darkMode ? 'text-white' : 'text-gray-900'
@@ -1599,7 +1599,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 mb-12">
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
             {/* Bilingual Literacy */}
             <div className={`group relative p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 ${
               darkMode ? 'bg-gradient-to-br from-cyan-900/50 to-blue-900/50 border border-cyan-700/30' : 'bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-200'
@@ -1698,14 +1698,14 @@ function Home() {
       {/* Social Proof and Impact */}
       <section 
         id="impact" 
-        className="py-20 px-6"
+        className="py-20 px-3"
         style={{
           background: darkMode 
             ? 'radial-gradient(ellipse at center, rgba(255, 215, 0, 0.1) 0%, rgba(255, 140, 0, 0.15) 30%, rgba(34, 139, 34, 0.2) 60%, rgba(30, 144, 255, 0.15) 100%), #111827'
             : 'radial-gradient(ellipse at center, rgba(255, 215, 0, 0.12) 0%, rgba(255, 140, 0, 0.18) 30%, rgba(34, 139, 34, 0.22) 60%, rgba(30, 144, 255, 0.18) 100%), linear-gradient(135deg, #FFFFFF 0%, #FFFBEB 50%, #F0FDF4 100%)' // Light with all logo colors
         }}
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1600px] mx-auto px-3">
           <div className="text-center mb-12">
             <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${
               darkMode ? 'text-white' : 'text-gray-900'
@@ -1993,7 +1993,7 @@ function Home() {
           <div className={`rounded-2xl p-8 md:p-12 shadow-xl ${
             darkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'
           }`}>
-            <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8">
+            <div className="flex flex-col md:flex-row items-start gap-6 md:gap-4">
               {/* Left: Star Icon Badge */}
               <div className="flex-shrink-0 mx-auto md:mx-0">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-500 via-purple-600 to-blue-500 rounded-full flex items-center justify-center shadow-lg">
@@ -2033,7 +2033,7 @@ function Home() {
       {/* Footer */}
       <footer 
         id="contact" 
-        className="relative py-16 px-6 overflow-hidden"
+        className="relative py-16 overflow-hidden"
         style={{
           background: darkMode 
             ? 'linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #1e293b 100%)'
@@ -2105,8 +2105,8 @@ function Home() {
           }}
         ></div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="w-full relative z-10 px-3">
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
             {/* Brand Section */}
             <div className="animate-fadeInUp">
               <div className="mb-6">

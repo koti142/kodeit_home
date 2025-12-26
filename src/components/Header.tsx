@@ -39,7 +39,7 @@ function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 shadow-sm transition-colors duration-300 ${
       darkMode ? 'bg-gray-900 border-b border-gray-800' : 'bg-white'
     }`}>
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="w-full px-3 py-4 flex items-center justify-between">
         {/* Left: Logo */}
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img src={logo} alt="KODEIT Logo" className="w-12 h-12 object-contain" />
