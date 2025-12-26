@@ -1,23 +1,19 @@
-import React from 'react';
 import { useDarkMode } from '../contexts/DarkModeContext';
 import chetanSehgal from '../assets/chetan-sehgal.png';
+import logo from '../assets/logo.png';
 import { 
   BookOpen, 
   Users, 
   Award, 
-  Target, 
   Brain, 
-  Shield, 
-  Code, 
+  Code,
   Database, 
   Lock, 
-  Cpu,
   GraduationCap,
   Lightbulb,
   Globe,
   BarChart3,
   CheckCircle2,
-  PlayCircle,
   BookMarked,
   Video,
   Headphones,
@@ -25,15 +21,14 @@ import {
   Star,
   Mail,
   ExternalLink,
-  Building2,
-  Network,
   ChevronRight,
   Sparkles,
   TrendingUp,
   Languages,
   Layers,
-  Monitor,
-  Radio
+  Radio,
+  UserCheck,
+  Heart
 } from 'lucide-react';
 
 function Home() {
@@ -305,8 +300,8 @@ function Home() {
               {/* Top Left Tile */}
               <div className="relative group overflow-hidden rounded-xl cursor-pointer shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop" 
-                  alt="KODEIT Platform" 
+                  src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop" 
+                  alt="KODEIT Annual Report 2024" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-900/95 via-purple-800/85 to-purple-800/50"></div>
@@ -319,8 +314,8 @@ function Home() {
               {/* Top Right Tile */}
               <div className="relative group overflow-hidden rounded-xl cursor-pointer shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&h=400&fit=crop" 
-                  alt="Future of Education" 
+                  src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&h=400&fit=crop" 
+                  alt="Future of ICT Education" 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/95 to-gray-900/60"></div>
@@ -332,8 +327,8 @@ function Home() {
               {/* Bottom Left Tile */}
               <div className="relative group overflow-hidden rounded-xl cursor-pointer shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop" 
-                  alt="ESG and Education" 
+                  src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop" 
+                  alt="Digital Citizenship Education" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-900/95 via-purple-800/85 to-purple-800/50"></div>
@@ -345,8 +340,8 @@ function Home() {
               {/* Bottom Right Tile */}
               <div className="relative group overflow-hidden rounded-xl cursor-pointer shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop" 
-                  alt="Cloud-based Learning" 
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" 
+                  alt="Cloud-based Learning Platform" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/95 to-gray-900/60"></div>
@@ -453,9 +448,12 @@ function Home() {
               {/* Left: Image */}
               <div className="relative overflow-hidden rounded-xl group">
                 <img 
-                  src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop" 
-                  alt="Educational philosophy" 
+                  src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&h=600&fit=crop&q=80" 
+                  alt="Educational philosophy - Students actively learning and engaged" 
                   className="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+                  onError={(e) => {
+                    e.currentTarget.src = 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop&q=80';
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-xl"></div>
               </div>
@@ -705,280 +703,254 @@ function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-5 gap-6">
-            {/* Super Admin */}
-            <div 
-              className="backdrop-blur-sm rounded-xl p-6 shadow-xl border transition-all duration-300 hover:scale-105"
-              style={{
-                background: darkMode 
-                  ? 'rgba(17, 24, 39, 0.8)' 
-                  : 'rgba(255, 255, 255, 0.9)',
-                borderColor: darkMode ? 'rgba(55, 65, 81, 0.5)' : 'rgba(229, 231, 235, 0.8)'
-              }}
-            >
-              <div 
-                className="w-16 h-16 rounded-lg flex items-center justify-center mb-4 border"
-                style={{
-                  background: darkMode ? 'rgba(239, 68, 68, 0.2)' : 'rgba(239, 68, 68, 0.1)',
-                  borderColor: darkMode ? 'rgba(239, 68, 68, 0.3)' : 'rgba(239, 68, 68, 0.2)'
-                }}
-              >
-                <Shield className={darkMode ? 'text-red-400' : 'text-red-600'} size={32} />
-              </div>
-              <h3 className={`text-xl font-bold mb-2 ${
-                darkMode ? 'text-white' : 'text-gray-900'
-              }`}>
-                Super Admin
-              </h3>
-              <p className={`text-sm mb-4 leading-relaxed ${
-                darkMode ? 'text-gray-300' : 'text-gray-700'
-              }`}>
-                Complete system administration and comprehensive analytics dashboard.
-              </p>
-              <div className="mb-4 space-y-2">
-                <div className={`flex items-center gap-2 text-xs ${
-                  darkMode ? 'text-gray-400' : 'text-gray-600'
-                }`}>
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
-                  <span>System Management</span>
-                </div>
-                <div className={`flex items-center gap-2 text-xs ${
-                  darkMode ? 'text-gray-400' : 'text-gray-600'
-                }`}>
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
-                  <span>Advanced Analytics</span>
-                </div>
-                <div className={`flex items-center gap-2 text-xs ${
-                  darkMode ? 'text-gray-400' : 'text-gray-600'
-                }`}>
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
-                  <span>User Administration</span>
-                </div>
-              </div>
-              <button className="w-full px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2">
-                Access Dashboard
-                <ChevronRight size={18} />
-              </button>
-            </div>
-
-            {/* School Admin */}
-            <div 
-              className="backdrop-blur-sm rounded-xl p-6 shadow-xl border transition-all duration-300 hover:scale-105"
-              style={{
-                background: darkMode 
-                  ? 'rgba(17, 24, 39, 0.8)' 
-                  : 'rgba(255, 255, 255, 0.9)',
-                borderColor: darkMode ? 'rgba(55, 65, 81, 0.5)' : 'rgba(229, 231, 235, 0.8)'
-              }}
-            >
-              <div 
-                className="w-16 h-16 rounded-lg flex items-center justify-center mb-4 border"
-                style={{
-                  background: darkMode ? 'rgba(168, 85, 247, 0.2)' : 'rgba(168, 85, 247, 0.1)',
-                  borderColor: darkMode ? 'rgba(168, 85, 247, 0.3)' : 'rgba(168, 85, 247, 0.2)'
-                }}
-              >
-                <Building2 className={darkMode ? 'text-purple-400' : 'text-purple-600'} size={32} />
-              </div>
-              <h3 className={`text-xl font-bold mb-2 ${
-                darkMode ? 'text-white' : 'text-gray-900'
-              }`}>
-                School Admin
-              </h3>
-              <p className={`text-sm mb-4 leading-relaxed ${
-                darkMode ? 'text-gray-300' : 'text-gray-700'
-              }`}>
-                Monitor school-wide progress and manage teacher development programs.
-              </p>
-              <div className="mb-4 space-y-2">
-                <div className={`flex items-center gap-2 text-xs ${
-                  darkMode ? 'text-gray-400' : 'text-gray-600'
-                }`}>
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
-                  <span>School Analytics</span>
-                </div>
-                <div className={`flex items-center gap-2 text-xs ${
-                  darkMode ? 'text-gray-400' : 'text-gray-600'
-                }`}>
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
-                  <span>Teacher Reports</span>
-                </div>
-                <div className={`flex items-center gap-2 text-xs ${
-                  darkMode ? 'text-gray-400' : 'text-gray-600'
-                }`}>
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
-                  <span>Progress Monitoring</span>
-                </div>
-              </div>
-              <button className="w-full px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2">
-                Access Dashboard
-                <ChevronRight size={18} />
-              </button>
-            </div>
-
+          <div className="grid md:grid-cols-3 gap-6">
             {/* Teacher Dashboard */}
             <div 
-              className="backdrop-blur-sm rounded-xl p-6 shadow-xl border transition-all duration-300 hover:scale-105"
+              className="group relative backdrop-blur-sm rounded-2xl p-6 shadow-2xl border-2 transition-all duration-500 hover:scale-105 hover:shadow-green-500/50 overflow-hidden"
               style={{
                 background: darkMode 
-                  ? 'rgba(17, 24, 39, 0.8)' 
-                  : 'rgba(255, 255, 255, 0.9)',
-                borderColor: darkMode ? 'rgba(55, 65, 81, 0.5)' : 'rgba(229, 231, 235, 0.8)'
+                  ? 'rgba(17, 24, 39, 0.95)' 
+                  : 'rgba(255, 255, 255, 0.95)',
+                borderColor: darkMode ? 'rgba(34, 197, 94, 0.4)' : 'rgba(34, 197, 94, 0.3)'
               }}
             >
+              {/* Gradient border glow on hover */}
               <div 
-                className="w-16 h-16 rounded-lg flex items-center justify-center mb-4 border"
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 style={{
-                  background: darkMode ? 'rgba(34, 197, 94, 0.2)' : 'rgba(34, 197, 94, 0.1)',
-                  borderColor: darkMode ? 'rgba(34, 197, 94, 0.3)' : 'rgba(34, 197, 94, 0.2)'
+                  background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(22, 163, 74, 0.3) 100%)',
+                  filter: 'blur(8px)',
+                  zIndex: -1
+                }}
+              ></div>
+              
+              {/* Icon Container with enhanced styling */}
+              <div 
+                className="relative w-20 h-20 rounded-2xl flex items-center justify-center mb-5 border-2 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
+                style={{
+                  background: darkMode 
+                    ? 'linear-gradient(135deg, rgba(34, 197, 94, 0.25) 0%, rgba(22, 163, 74, 0.35) 100%)' 
+                    : 'linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(22, 163, 74, 0.25) 100%)',
+                  borderColor: darkMode ? 'rgba(34, 197, 94, 0.5)' : 'rgba(34, 197, 94, 0.4)',
+                  boxShadow: darkMode 
+                    ? '0 4px 20px rgba(34, 197, 94, 0.3)' 
+                    : '0 4px 20px rgba(34, 197, 94, 0.2)'
                 }}
               >
-                <Users className={darkMode ? 'text-green-400' : 'text-green-600'} size={32} />
+                <UserCheck className={darkMode ? 'text-green-400' : 'text-green-600'} size={36} strokeWidth={2} />
+                <div 
+                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{
+                    background: 'radial-gradient(circle, rgba(34, 197, 94, 0.4) 0%, transparent 70%)'
+                  }}
+                ></div>
               </div>
-              <h3 className={`text-xl font-bold mb-2 ${
-                darkMode ? 'text-white' : 'text-gray-900'
+              
+              <h3 className={`text-xl font-bold mb-3 transition-colors duration-300 ${
+                darkMode ? 'text-white group-hover:text-green-300' : 'text-gray-900 group-hover:text-green-600'
               }`}>
                 Teacher Dashboard
               </h3>
-              <p className={`text-sm mb-4 leading-relaxed ${
+              <p className={`text-sm mb-5 leading-relaxed ${
                 darkMode ? 'text-gray-300' : 'text-gray-700'
               }`}>
                 Manage classes, track student progress, and deliver engaging lessons.
               </p>
-              <div className="mb-4 space-y-2">
-                <div className={`flex items-center gap-2 text-xs ${
+              <div className="mb-5 space-y-2.5">
+                <div className={`flex items-center gap-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1 ${
                   darkMode ? 'text-gray-400' : 'text-gray-600'
                 }`}>
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
+                  <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                   <span>Class Management</span>
                 </div>
-                <div className={`flex items-center gap-2 text-xs ${
+                <div className={`flex items-center gap-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1 delay-75 ${
                   darkMode ? 'text-gray-400' : 'text-gray-600'
                 }`}>
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
+                  <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                   <span>Student Progress</span>
                 </div>
-                <div className={`flex items-center gap-2 text-xs ${
+                <div className={`flex items-center gap-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1 delay-150 ${
                   darkMode ? 'text-gray-400' : 'text-gray-600'
                 }`}>
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
+                  <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                   <span>Lesson Planning</span>
                 </div>
               </div>
-              <button className="w-full px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2">
+              <a 
+                href="https://ict.kodeit.digital/login/index.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full px-4 py-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-green-500/50 hover:scale-105 group-hover:gap-3"
+              >
                 Access Dashboard
-                <ChevronRight size={18} />
-              </button>
+                <ChevronRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
             </div>
 
             {/* Parent Dashboard */}
             <div 
-              className="backdrop-blur-sm rounded-xl p-6 shadow-xl border transition-all duration-300 hover:scale-105"
+              className="group relative backdrop-blur-sm rounded-2xl p-6 shadow-2xl border-2 transition-all duration-500 hover:scale-105 hover:shadow-cyan-500/50 overflow-hidden"
               style={{
                 background: darkMode 
-                  ? 'rgba(17, 24, 39, 0.8)' 
-                  : 'rgba(255, 255, 255, 0.9)',
-                borderColor: darkMode ? 'rgba(55, 65, 81, 0.5)' : 'rgba(229, 231, 235, 0.8)'
+                  ? 'rgba(17, 24, 39, 0.95)' 
+                  : 'rgba(255, 255, 255, 0.95)',
+                borderColor: darkMode ? 'rgba(6, 182, 212, 0.4)' : 'rgba(6, 182, 212, 0.3)'
               }}
             >
+              {/* Gradient border glow on hover */}
               <div 
-                className="w-16 h-16 rounded-lg flex items-center justify-center mb-4 border"
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 style={{
-                  background: darkMode ? 'rgba(6, 182, 212, 0.2)' : 'rgba(6, 182, 212, 0.1)',
-                  borderColor: darkMode ? 'rgba(6, 182, 212, 0.3)' : 'rgba(6, 182, 212, 0.2)'
+                  background: 'linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(8, 145, 178, 0.3) 100%)',
+                  filter: 'blur(8px)',
+                  zIndex: -1
+                }}
+              ></div>
+              
+              {/* Icon Container with enhanced styling */}
+              <div 
+                className="relative w-20 h-20 rounded-2xl flex items-center justify-center mb-5 border-2 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
+                style={{
+                  background: darkMode 
+                    ? 'linear-gradient(135deg, rgba(6, 182, 212, 0.25) 0%, rgba(8, 145, 178, 0.35) 100%)' 
+                    : 'linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(8, 145, 178, 0.25) 100%)',
+                  borderColor: darkMode ? 'rgba(6, 182, 212, 0.5)' : 'rgba(6, 182, 212, 0.4)',
+                  boxShadow: darkMode 
+                    ? '0 4px 20px rgba(6, 182, 212, 0.3)' 
+                    : '0 4px 20px rgba(6, 182, 212, 0.2)'
                 }}
               >
-                <Users className={darkMode ? 'text-cyan-400' : 'text-cyan-600'} size={32} />
+                <Heart className={darkMode ? 'text-cyan-400' : 'text-cyan-600'} size={36} strokeWidth={2} />
+                <div 
+                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{
+                    background: 'radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%)'
+                  }}
+                ></div>
               </div>
-              <h3 className={`text-xl font-bold mb-2 ${
-                darkMode ? 'text-white' : 'text-gray-900'
+              
+              <h3 className={`text-xl font-bold mb-3 transition-colors duration-300 ${
+                darkMode ? 'text-white group-hover:text-cyan-300' : 'text-gray-900 group-hover:text-cyan-600'
               }`}>
                 Parent Dashboard
               </h3>
-              <p className={`text-sm mb-4 leading-relaxed ${
+              <p className={`text-sm mb-5 leading-relaxed ${
                 darkMode ? 'text-gray-300' : 'text-gray-700'
               }`}>
                 Monitor your child's progress, view reports, and stay engaged with their learning journey.
               </p>
-              <div className="mb-4 space-y-2">
-                <div className={`flex items-center gap-2 text-xs ${
+              <div className="mb-5 space-y-2.5">
+                <div className={`flex items-center gap-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1 ${
                   darkMode ? 'text-gray-400' : 'text-gray-600'
                 }`}>
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
+                  <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                   <span>Progress Reports</span>
                 </div>
-                <div className={`flex items-center gap-2 text-xs ${
+                <div className={`flex items-center gap-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1 delay-75 ${
                   darkMode ? 'text-gray-400' : 'text-gray-600'
                 }`}>
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
+                  <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                   <span>Activity Tracking</span>
                 </div>
-                <div className={`flex items-center gap-2 text-xs ${
+                <div className={`flex items-center gap-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1 delay-150 ${
                   darkMode ? 'text-gray-400' : 'text-gray-600'
                 }`}>
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
+                  <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                   <span>Communication</span>
                 </div>
               </div>
-              <button className="w-full px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2">
+              <a 
+                href="https://ict.kodeit.digital/login/index.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-cyan-500/50 hover:scale-105 group-hover:gap-3"
+              >
                 Access Dashboard
-                <ChevronRight size={18} />
-              </button>
+                <ChevronRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
             </div>
 
             {/* Student Dashboard */}
             <div 
-              className="backdrop-blur-sm rounded-xl p-6 shadow-xl border transition-all duration-300 hover:scale-105"
+              className="group relative backdrop-blur-sm rounded-2xl p-6 shadow-2xl border-2 transition-all duration-500 hover:scale-105 hover:shadow-orange-500/50 overflow-hidden"
               style={{
                 background: darkMode 
-                  ? 'rgba(17, 24, 39, 0.8)' 
-                  : 'rgba(255, 255, 255, 0.9)',
-                borderColor: darkMode ? 'rgba(55, 65, 81, 0.5)' : 'rgba(229, 231, 235, 0.8)'
+                  ? 'rgba(17, 24, 39, 0.95)' 
+                  : 'rgba(255, 255, 255, 0.95)',
+                borderColor: darkMode ? 'rgba(249, 115, 22, 0.4)' : 'rgba(249, 115, 22, 0.3)'
               }}
             >
+              {/* Gradient border glow on hover */}
               <div 
-                className="w-16 h-16 rounded-lg flex items-center justify-center mb-4 border"
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 style={{
-                  background: darkMode ? 'rgba(249, 115, 22, 0.2)' : 'rgba(249, 115, 22, 0.1)',
-                  borderColor: darkMode ? 'rgba(249, 115, 22, 0.3)' : 'rgba(249, 115, 22, 0.2)'
+                  background: 'linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(234, 88, 12, 0.3) 100%)',
+                  filter: 'blur(8px)',
+                  zIndex: -1
+                }}
+              ></div>
+              
+              {/* Icon Container with enhanced styling */}
+              <div 
+                className="relative w-20 h-20 rounded-2xl flex items-center justify-center mb-5 border-2 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
+                style={{
+                  background: darkMode 
+                    ? 'linear-gradient(135deg, rgba(249, 115, 22, 0.25) 0%, rgba(234, 88, 12, 0.35) 100%)' 
+                    : 'linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(234, 88, 12, 0.25) 100%)',
+                  borderColor: darkMode ? 'rgba(249, 115, 22, 0.5)' : 'rgba(249, 115, 22, 0.4)',
+                  boxShadow: darkMode 
+                    ? '0 4px 20px rgba(249, 115, 22, 0.3)' 
+                    : '0 4px 20px rgba(249, 115, 22, 0.2)'
                 }}
               >
-                <GraduationCap className={darkMode ? 'text-orange-400' : 'text-orange-600'} size={32} />
+                <GraduationCap className={darkMode ? 'text-orange-400' : 'text-orange-600'} size={36} strokeWidth={2} />
+                <div 
+                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{
+                    background: 'radial-gradient(circle, rgba(249, 115, 22, 0.4) 0%, transparent 70%)'
+                  }}
+                ></div>
               </div>
-              <h3 className={`text-xl font-bold mb-2 ${
-                darkMode ? 'text-white' : 'text-gray-900'
+              
+              <h3 className={`text-xl font-bold mb-3 transition-colors duration-300 ${
+                darkMode ? 'text-white group-hover:text-orange-300' : 'text-gray-900 group-hover:text-orange-600'
               }`}>
                 Student Dashboard
               </h3>
-              <p className={`text-sm mb-4 leading-relaxed ${
+              <p className={`text-sm mb-5 leading-relaxed ${
                 darkMode ? 'text-gray-300' : 'text-gray-700'
               }`}>
                 Access your courses, track your progress, and complete interactive learning activities.
               </p>
-              <div className="mb-4 space-y-2">
-                <div className={`flex items-center gap-2 text-xs ${
+              <div className="mb-5 space-y-2.5">
+                <div className={`flex items-center gap-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1 ${
                   darkMode ? 'text-gray-400' : 'text-gray-600'
                 }`}>
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
+                  <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                   <span>My Courses</span>
                 </div>
-                <div className={`flex items-center gap-2 text-xs ${
+                <div className={`flex items-center gap-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1 delay-75 ${
                   darkMode ? 'text-gray-400' : 'text-gray-600'
                 }`}>
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
+                  <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                   <span>Learning Progress</span>
                 </div>
-                <div className={`flex items-center gap-2 text-xs ${
+                <div className={`flex items-center gap-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1 delay-150 ${
                   darkMode ? 'text-gray-400' : 'text-gray-600'
                 }`}>
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
+                  <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                   <span>Assignments</span>
                 </div>
               </div>
-              <button className="w-full px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2">
+              <a 
+                href="https://ict.kodeit.digital/login/index.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full px-4 py-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-orange-500/50 hover:scale-105 group-hover:gap-3"
+              >
                 Access Dashboard
-                <ChevronRight size={18} />
-              </button>
+                <ChevronRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
             </div>
           </div>
         </div>
@@ -1080,7 +1052,7 @@ function Home() {
 
           <div className="relative overflow-hidden rounded-2xl">
             <img 
-              src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=600&fit=crop" 
+              src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1200&h=600&fit=crop" 
               alt="Spiral learning progression" 
               className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
             />
@@ -1135,13 +1107,13 @@ function Home() {
             }`}>
               <div className="relative h-40 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop" 
-                  alt="Emulators"
+                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop" 
+                  alt="Code Emulators - Programming and Scratch emulators"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
                 <div className="absolute top-3 left-3 w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center shadow-lg backdrop-blur-sm bg-white/20">
-                  <Monitor className="text-white" size={28} />
+                  <Code className="text-white" size={28} />
                 </div>
               </div>
               <div className="p-5">
@@ -1164,8 +1136,8 @@ function Home() {
             }`}>
               <div className="relative h-40 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop" 
-                  alt="Audio Books"
+                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop" 
+                  alt="Audio Books - Student listening to educational content with headphones"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
@@ -1222,7 +1194,7 @@ function Home() {
             }`}>
               <div className="relative h-40 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop" 
+                  src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=300&fit=crop" 
                   alt="Simulations"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1749,91 +1721,269 @@ function Home() {
 
           <div className="grid md:grid-cols-4 gap-6 mb-12">
             {/* Audio Books Card */}
-            <div className={`p-8 rounded-xl shadow-lg text-center transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-              darkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-100'
-            }`}>
-              <div className="flex justify-center mb-4">
-                <Headphones className={`w-14 h-14 ${
-                  darkMode ? 'text-blue-400' : 'text-blue-600'
-                }`} />
+            <div 
+              className="group relative p-8 rounded-2xl text-center transition-all duration-500 hover:scale-110 hover:-translate-y-2 overflow-hidden"
+              style={{
+                background: darkMode 
+                  ? 'rgba(17, 24, 39, 0.95)' 
+                  : 'rgba(255, 255, 255, 0.95)',
+                border: darkMode 
+                  ? '2px solid rgba(59, 130, 246, 0.3)' 
+                  : '2px solid rgba(59, 130, 246, 0.2)',
+                boxShadow: darkMode 
+                  ? '0 10px 30px rgba(59, 130, 246, 0.2)' 
+                  : '0 10px 30px rgba(59, 130, 246, 0.15)'
+              }}
+            >
+              {/* Gradient border glow on hover */}
+              <div 
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.3) 100%)',
+                  filter: 'blur(12px)',
+                  zIndex: -1
+                }}
+              ></div>
+              
+              {/* Icon Container with gradient background */}
+              <div className="flex justify-center mb-6">
+                <div 
+                  className="relative w-20 h-20 rounded-2xl flex items-center justify-center border-2 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
+                  style={{
+                    background: darkMode 
+                      ? 'linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(37, 99, 235, 0.4) 100%)' 
+                      : 'linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(37, 99, 235, 0.25) 100%)',
+                    borderColor: darkMode ? 'rgba(59, 130, 246, 0.5)' : 'rgba(59, 130, 246, 0.4)',
+                    boxShadow: darkMode 
+                      ? '0 8px 25px rgba(59, 130, 246, 0.4)' 
+                      : '0 8px 25px rgba(59, 130, 246, 0.3)'
+                  }}
+                >
+                  <Headphones className="text-blue-500" size={40} strokeWidth={2} />
+                  <div 
+                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{
+                      background: 'radial-gradient(circle, rgba(59, 130, 246, 0.5) 0%, transparent 70%)'
+                    }}
+                  ></div>
+                </div>
               </div>
-              <div className={`text-5xl font-bold mb-3 ${
-                darkMode ? 'text-white' : 'text-gray-900'
-              }`}>
+              
+              <div 
+                className="text-6xl font-bold mb-4 transition-all duration-300 group-hover:text-blue-500"
+                style={{
+                  color: darkMode ? '#ffffff' : '#111827'
+                }}
+              >
                 167+
               </div>
-              <div className={`text-base font-medium ${
-                darkMode ? 'text-gray-300' : 'text-gray-700'
-              }`}>
+              <div 
+                className="text-lg font-semibold transition-colors duration-300 group-hover:text-blue-600"
+                style={{
+                  color: darkMode ? '#d1d5db' : '#374151'
+                }}
+              >
                 Audio Books
               </div>
             </div>
 
             {/* Projects Card */}
-            <div className={`p-8 rounded-xl shadow-lg text-center transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-              darkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-100'
-            }`}
-            style={!darkMode ? { background: 'linear-gradient(135deg, #FDF2F8 0%, #FCE7F3 100%)' } : {}}
+            <div 
+              className="group relative p-8 rounded-2xl text-center transition-all duration-500 hover:scale-110 hover:-translate-y-2 overflow-hidden"
+              style={{
+                background: darkMode 
+                  ? 'rgba(17, 24, 39, 0.95)' 
+                  : 'rgba(255, 255, 255, 0.95)',
+                border: darkMode 
+                  ? '2px solid rgba(168, 85, 247, 0.3)' 
+                  : '2px solid rgba(168, 85, 247, 0.2)',
+                boxShadow: darkMode 
+                  ? '0 10px 30px rgba(168, 85, 247, 0.2)' 
+                  : '0 10px 30px rgba(168, 85, 247, 0.15)'
+              }}
             >
-              <div className="flex justify-center mb-4">
-                <Lightbulb className={`w-14 h-14 ${
-                  darkMode ? 'text-purple-400' : 'text-purple-600'
-                }`} />
+              {/* Gradient border glow on hover */}
+              <div 
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(147, 51, 234, 0.3) 100%)',
+                  filter: 'blur(12px)',
+                  zIndex: -1
+                }}
+              ></div>
+              
+              {/* Icon Container with gradient background */}
+              <div className="flex justify-center mb-6">
+                <div 
+                  className="relative w-20 h-20 rounded-2xl flex items-center justify-center border-2 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
+                  style={{
+                    background: darkMode 
+                      ? 'linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(147, 51, 234, 0.4) 100%)' 
+                      : 'linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(147, 51, 234, 0.25) 100%)',
+                    borderColor: darkMode ? 'rgba(168, 85, 247, 0.5)' : 'rgba(168, 85, 247, 0.4)',
+                    boxShadow: darkMode 
+                      ? '0 8px 25px rgba(168, 85, 247, 0.4)' 
+                      : '0 8px 25px rgba(168, 85, 247, 0.3)'
+                  }}
+                >
+                  <Lightbulb className="text-purple-500" size={40} strokeWidth={2} fill="currentColor" fillOpacity={0.2} />
+                  <div 
+                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{
+                      background: 'radial-gradient(circle, rgba(168, 85, 247, 0.5) 0%, transparent 70%)'
+                    }}
+                  ></div>
+                </div>
               </div>
-              <div className={`text-5xl font-bold mb-3 ${
-                darkMode ? 'text-white' : 'text-gray-900'
-              }`}>
+              
+              <div 
+                className="text-6xl font-bold mb-4 transition-all duration-300 group-hover:text-purple-500"
+                style={{
+                  color: darkMode ? '#ffffff' : '#111827'
+                }}
+              >
                 828+
               </div>
-              <div className={`text-base font-medium ${
-                darkMode ? 'text-gray-300' : 'text-gray-700'
-              }`}>
+              <div 
+                className="text-lg font-semibold transition-colors duration-300 group-hover:text-purple-600"
+                style={{
+                  color: darkMode ? '#d1d5db' : '#374151'
+                }}
+              >
                 Projects
               </div>
             </div>
 
             {/* Assessments Card */}
-            <div className={`p-8 rounded-xl shadow-lg text-center transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-              darkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-100'
-            }`}
-            style={!darkMode ? { background: 'linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%)' } : {}}
+            <div 
+              className="group relative p-8 rounded-2xl text-center transition-all duration-500 hover:scale-110 hover:-translate-y-2 overflow-hidden"
+              style={{
+                background: darkMode 
+                  ? 'rgba(17, 24, 39, 0.95)' 
+                  : 'rgba(255, 255, 255, 0.95)',
+                border: darkMode 
+                  ? '2px solid rgba(34, 197, 94, 0.3)' 
+                  : '2px solid rgba(34, 197, 94, 0.2)',
+                boxShadow: darkMode 
+                  ? '0 10px 30px rgba(34, 197, 94, 0.2)' 
+                  : '0 10px 30px rgba(34, 197, 94, 0.15)'
+              }}
             >
-              <div className="flex justify-center mb-4">
-                <BookMarked className={`w-14 h-14 ${
-                  darkMode ? 'text-green-400' : 'text-green-600'
-                }`} />
+              {/* Gradient border glow on hover */}
+              <div 
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(22, 163, 74, 0.3) 100%)',
+                  filter: 'blur(12px)',
+                  zIndex: -1
+                }}
+              ></div>
+              
+              {/* Icon Container with gradient background */}
+              <div className="flex justify-center mb-6">
+                <div 
+                  className="relative w-20 h-20 rounded-2xl flex items-center justify-center border-2 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
+                  style={{
+                    background: darkMode 
+                      ? 'linear-gradient(135deg, rgba(34, 197, 94, 0.3) 0%, rgba(22, 163, 74, 0.4) 100%)' 
+                      : 'linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(22, 163, 74, 0.25) 100%)',
+                    borderColor: darkMode ? 'rgba(34, 197, 94, 0.5)' : 'rgba(34, 197, 94, 0.4)',
+                    boxShadow: darkMode 
+                      ? '0 8px 25px rgba(34, 197, 94, 0.4)' 
+                      : '0 8px 25px rgba(34, 197, 94, 0.3)'
+                  }}
+                >
+                  <BookMarked className="text-green-500" size={40} strokeWidth={2} />
+                  <div 
+                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{
+                      background: 'radial-gradient(circle, rgba(34, 197, 94, 0.5) 0%, transparent 70%)'
+                    }}
+                  ></div>
+                </div>
               </div>
-              <div className={`text-5xl font-bold mb-3 ${
-                darkMode ? 'text-white' : 'text-gray-900'
-              }`}>
+              
+              <div 
+                className="text-6xl font-bold mb-4 transition-all duration-300 group-hover:text-green-500"
+                style={{
+                  color: darkMode ? '#ffffff' : '#111827'
+                }}
+              >
                 1580+
               </div>
-              <div className={`text-base font-medium ${
-                darkMode ? 'text-gray-300' : 'text-gray-700'
-              }`}>
+              <div 
+                className="text-lg font-semibold transition-colors duration-300 group-hover:text-green-600"
+                style={{
+                  color: darkMode ? '#d1d5db' : '#374151'
+                }}
+              >
                 Assessments
               </div>
             </div>
 
             {/* Lessons Card */}
-            <div className={`p-8 rounded-xl shadow-lg text-center transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-              darkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-100'
-            }`}
-            style={!darkMode ? { background: 'linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%)' } : {}}
+            <div 
+              className="group relative p-8 rounded-2xl text-center transition-all duration-500 hover:scale-110 hover:-translate-y-2 overflow-hidden"
+              style={{
+                background: darkMode 
+                  ? 'rgba(17, 24, 39, 0.95)' 
+                  : 'rgba(255, 255, 255, 0.95)',
+                border: darkMode 
+                  ? '2px solid rgba(249, 115, 22, 0.3)' 
+                  : '2px solid rgba(249, 115, 22, 0.2)',
+                boxShadow: darkMode 
+                  ? '0 10px 30px rgba(249, 115, 22, 0.2)' 
+                  : '0 10px 30px rgba(249, 115, 22, 0.15)'
+              }}
             >
-              <div className="flex justify-center mb-4">
-                <GraduationCap className={`w-14 h-14 ${
-                  darkMode ? 'text-orange-400' : 'text-orange-600'
-                }`} />
+              {/* Gradient border glow on hover */}
+              <div 
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(234, 88, 12, 0.3) 100%)',
+                  filter: 'blur(12px)',
+                  zIndex: -1
+                }}
+              ></div>
+              
+              {/* Icon Container with gradient background */}
+              <div className="flex justify-center mb-6">
+                <div 
+                  className="relative w-20 h-20 rounded-2xl flex items-center justify-center border-2 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
+                  style={{
+                    background: darkMode 
+                      ? 'linear-gradient(135deg, rgba(249, 115, 22, 0.3) 0%, rgba(234, 88, 12, 0.4) 100%)' 
+                      : 'linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(234, 88, 12, 0.25) 100%)',
+                    borderColor: darkMode ? 'rgba(249, 115, 22, 0.5)' : 'rgba(249, 115, 22, 0.4)',
+                    boxShadow: darkMode 
+                      ? '0 8px 25px rgba(249, 115, 22, 0.4)' 
+                      : '0 8px 25px rgba(249, 115, 22, 0.3)'
+                  }}
+                >
+                  <GraduationCap className="text-orange-500" size={40} strokeWidth={2} />
+                  <div 
+                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{
+                      background: 'radial-gradient(circle, rgba(249, 115, 22, 0.5) 0%, transparent 70%)'
+                    }}
+                  ></div>
+                </div>
               </div>
-              <div className={`text-5xl font-bold mb-3 ${
-                darkMode ? 'text-white' : 'text-gray-900'
-              }`}>
+              
+              <div 
+                className="text-6xl font-bold mb-4 transition-all duration-300 group-hover:text-orange-500"
+                style={{
+                  color: darkMode ? '#ffffff' : '#111827'
+                }}
+              >
                 2M+
               </div>
-              <div className={`text-base font-medium ${
-                darkMode ? 'text-gray-300' : 'text-gray-700'
-              }`}>
+              <div 
+                className="text-lg font-semibold transition-colors duration-300 group-hover:text-orange-600"
+                style={{
+                  color: darkMode ? '#d1d5db' : '#374151'
+                }}
+              >
                 Lessons
               </div>
             </div>
@@ -1883,96 +2033,323 @@ function Home() {
       {/* Footer */}
       <footer 
         id="contact" 
-        className="py-12 px-6 border-t"
+        className="relative py-16 px-6 overflow-hidden"
         style={{
           background: darkMode 
-            ? 'radial-gradient(ellipse at top, rgba(255, 215, 0, 0.08) 0%, rgba(255, 140, 0, 0.12) 30%, rgba(34, 139, 34, 0.15) 60%, rgba(30, 144, 255, 0.12) 100%), #111827'
-            : 'radial-gradient(ellipse at top, rgba(255, 215, 0, 0.1) 0%, rgba(255, 140, 0, 0.15) 30%, rgba(34, 139, 34, 0.18) 60%, rgba(30, 144, 255, 0.15) 100%), linear-gradient(135deg, #F9FAFB 0%, #FFFBEB 50%, #F0FDF4 100%)', // Light with all logo colors
-          borderTopColor: darkMode ? 'rgba(55, 65, 81, 0.5)' : 'rgba(229, 231, 235, 0.8)'
+            ? 'linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #1e293b 100%)'
+            : 'linear-gradient(135deg, #1e3a8a 0%, #1e40af 25%, #3b82f6 50%, #2563eb 75%, #1e40af 100%)'
         }}
       >
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className={`text-xl font-bold mb-4 ${
-                darkMode ? 'text-white' : 'text-gray-900'
-              }`}>
-                KODEIT
-              </h3>
-              <p className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
-                Shaping tomorrow through comprehensive ICT education
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div 
+            className="absolute top-0 left-0 w-96 h-96 rounded-full blur-3xl opacity-20"
+            style={{
+              background: 'radial-gradient(circle, rgba(59, 130, 246, 0.6) 0%, transparent 70%)',
+              animation: 'float 8s ease-in-out infinite, pulse 4s ease-in-out infinite'
+            }}
+          ></div>
+          <div 
+            className="absolute bottom-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-20"
+            style={{
+              background: 'radial-gradient(circle, rgba(34, 197, 94, 0.6) 0%, transparent 70%)',
+              animation: 'floatReverse 8s ease-in-out infinite, pulse 4s ease-in-out infinite',
+              animationDelay: '1s'
+            }}
+          ></div>
+          <div 
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-3xl opacity-10"
+            style={{
+              background: 'radial-gradient(circle, rgba(255, 215, 0, 0.5) 0%, transparent 70%)',
+              animation: 'float 10s ease-in-out infinite, pulse 5s ease-in-out infinite',
+              animationDelay: '2s'
+            }}
+          ></div>
+          
+          {/* Floating particles */}
+          {[...Array(6)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute rounded-full"
+              style={{
+                width: `${20 + i * 10}px`,
+                height: `${20 + i * 10}px`,
+                background: `rgba(${59 + i * 10}, ${130 + i * 5}, ${246 - i * 10}, 0.3)`,
+                left: `${10 + i * 15}%`,
+                top: `${20 + i * 10}%`,
+                animation: `float ${6 + i}s ease-in-out infinite, rotate ${20 + i * 5}s linear infinite`,
+                animationDelay: `${i * 0.5}s`,
+                filter: 'blur(2px)'
+              }}
+            ></div>
+          ))}
+        </div>
+
+        {/* Grid pattern overlay */}
+        <div 
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)',
+            backgroundSize: '50px 50px',
+            animation: 'slideUp 20s linear infinite'
+          }}
+        ></div>
+        
+        {/* Animated gradient overlay */}
+        <div 
+          className="absolute inset-0 opacity-10"
+          style={{
+            background: 'linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%)',
+            backgroundSize: '200% 200%',
+            animation: 'shimmer 8s linear infinite'
+          }}
+        ></div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid md:grid-cols-3 gap-12 mb-12">
+            {/* Brand Section */}
+            <div className="animate-fadeInUp">
+              <div className="mb-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <img 
+                    src={logo} 
+                    alt="KODEIT Logo" 
+                    className="w-16 h-16 object-contain animate-float"
+                    style={{
+                      animation: 'fadeInUp 0.6s ease-out, float 4s ease-in-out infinite',
+                      animationDelay: '0s, 0.5s',
+                      filter: 'drop-shadow(0 4px 8px rgba(255, 255, 255, 0.2))'
+                    }}
+                  />
+                  <h3 
+                    className="text-3xl font-bold text-white inline-block relative group"
+                    style={{
+                      animation: 'fadeInUp 0.6s ease-out, float 4s ease-in-out infinite',
+                      animationDelay: '0s, 0.5s'
+                    }}
+                  >
+                    KODEIT
+                    <span 
+                      className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-500 group-hover:w-full transition-all duration-500"
+                    ></span>
+                    <span className="absolute -top-2 -right-2 w-3 h-3 bg-yellow-400 rounded-full animate-bounce-slow opacity-75"></span>
+                  </h3>
+                </div>
+              </div>
+              <p 
+                className="text-white/80 text-lg leading-relaxed mb-6"
+                style={{
+                  animation: 'fadeInUp 0.8s ease-out'
+                }}
+              >
+                Shaping tomorrow through comprehensive ICT education. Empowering the next generation of digital innovators.
               </p>
+              <div className="flex gap-4">
+                {[
+                  { icon: Mail, href: 'mailto:info@kodeit.com', label: 'Email' },
+                  { icon: Globe, href: 'https://www.kodeit.com', label: 'Website' }
+                ].map((item, idx) => (
+                  <a
+                    key={idx}
+                    href={item.href}
+                    target={item.href.startsWith('http') ? '_blank' : undefined}
+                    rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    className="group relative w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 hover:rotate-6 animate-bounce-slow"
+                    style={{
+                      animation: `fadeInUp ${0.9 + idx * 0.1}s ease-out, bounce ${3 + idx}s ease-in-out infinite`,
+                      animationDelay: `${idx * 0.2}s`
+                    }}
+                  >
+                    <item.icon 
+                      className="text-white group-hover:text-yellow-300 transition-all duration-300 group-hover:rotate-12" 
+                      size={20}
+                      style={{
+                        animation: `rotate ${15 + idx * 5}s linear infinite`,
+                        animationPlayState: 'paused'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.animationPlayState = 'running';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.animationPlayState = 'paused';
+                      }}
+                    />
+                    <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-white/70 opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap group-hover:translate-y-0 translate-y-2">
+                      {item.label}
+                    </span>
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400/0 via-yellow-400/50 to-yellow-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-shimmer" style={{
+                      backgroundSize: '200% 100%',
+                      animation: 'shimmer 2s linear infinite'
+                    }}></div>
+                  </a>
+                ))}
+              </div>
             </div>
 
-            <div>
-              <h3 className={`text-xl font-bold mb-4 ${
-                darkMode ? 'text-white' : 'text-gray-900'
-              }`}>
+            {/* Contact Section */}
+            <div 
+              className="animate-fadeInUp"
+              style={{
+                animation: 'fadeInUp 1s ease-out'
+              }}
+            >
+              <h3 className="text-2xl font-bold mb-6 text-white relative inline-block group">
                 Contact Us
+                <span 
+                  className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-400 to-blue-500 group-hover:w-full transition-all duration-500"
+                ></span>
               </h3>
-              <div className="space-y-2">
+              <div className="space-y-4">
                 <a 
                   href="mailto:info@kodeit.com" 
-                  className={`flex items-center gap-2 hover:text-purple-600 transition-colors ${
-                    darkMode ? 'text-gray-400' : 'text-gray-600'
-                  }`}
+                  className="group flex items-center gap-3 text-white/90 hover:text-white transition-all duration-300 hover:translate-x-2 relative overflow-hidden"
+                  style={{
+                    animation: `fadeInUp ${1.1}s ease-out`
+                  }}
                 >
-                  <Mail size={18} />
-                  info@kodeit.com
+                  <div className="w-10 h-10 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 relative">
+                    <Mail className="text-white group-hover:text-green-300 transition-all duration-300 group-hover:animate-bounce-slow relative z-10" size={18} />
+                    <div className="absolute inset-0 rounded-lg bg-green-400/0 group-hover:bg-green-400/20 transition-all duration-300 animate-glow" style={{
+                      animation: 'glow 2s ease-in-out infinite',
+                      animationPlayState: 'paused'
+                    }}></div>
+                  </div>
+                  <span className="text-lg relative z-10">info@kodeit.com</span>
+                  <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-yellow-300 group-hover:animate-bounce-slow" size={18} />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                 </a>
                 <a 
                   href="https://www.kodeit.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className={`flex items-center gap-2 hover:text-purple-600 transition-colors ${
-                    darkMode ? 'text-gray-400' : 'text-gray-600'
-                  }`}
+                  className="group flex items-center gap-3 text-white/90 hover:text-white transition-all duration-300 hover:translate-x-2 relative overflow-hidden"
+                  style={{
+                    animation: `fadeInUp ${1.2}s ease-out`
+                  }}
                 >
-                  <Globe size={18} />
-                  www.kodeit.com
+                  <div className="w-10 h-10 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 relative">
+                    <Globe className="text-white group-hover:text-blue-300 transition-all duration-300 group-hover:animate-rotate-slow relative z-10" size={18} style={{
+                      animation: 'rotate 20s linear infinite',
+                      animationPlayState: 'paused'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.animationPlayState = 'running';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.animationPlayState = 'paused';
+                    }} />
+                    <div className="absolute inset-0 rounded-lg bg-blue-400/0 group-hover:bg-blue-400/20 transition-all duration-300 animate-glow" style={{
+                      animation: 'glow 2s ease-in-out infinite',
+                      animationPlayState: 'paused'
+                    }}></div>
+                  </div>
+                  <span className="text-lg relative z-10">www.kodeit.com</span>
+                  <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-yellow-300 group-hover:animate-bounce-slow" size={18} />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                 </a>
               </div>
             </div>
 
-            <div>
-              <h3 className={`text-xl font-bold mb-4 ${
-                darkMode ? 'text-white' : 'text-gray-900'
-              }`}>
+            {/* Social Media Section */}
+            <div 
+              className="animate-fadeInUp"
+              style={{
+                animation: 'fadeInUp 1.2s ease-out'
+              }}
+            >
+              <h3 className="text-2xl font-bold mb-6 text-white relative inline-block group">
                 Follow Us
+                <span 
+                  className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-500 group-hover:w-full transition-all duration-500"
+                ></span>
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 <a 
                   href="https://twitter.com/kodeitglobal" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className={`flex items-center gap-2 hover:text-purple-600 transition-colors ${
-                    darkMode ? 'text-gray-400' : 'text-gray-600'
-                  }`}
+                  className="group flex items-center gap-3 text-white/90 hover:text-white transition-all duration-300 hover:translate-x-2 relative overflow-hidden"
+                  style={{
+                    animation: `fadeInUp ${1.3}s ease-out`
+                  }}
                 >
-                  <Globe size={18} />
-                  <span>@kodeitglobal</span>
-                  <ExternalLink size={14} className="opacity-60" />
+                  <div className="w-10 h-10 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 relative">
+                    <Globe className="text-white group-hover:text-blue-400 transition-all duration-300 group-hover:animate-rotate-slow relative z-10" size={18} style={{
+                      animation: 'rotate 15s linear infinite',
+                      animationPlayState: 'paused'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.animationPlayState = 'running';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.animationPlayState = 'paused';
+                    }} />
+                    <div className="absolute inset-0 rounded-lg bg-blue-400/0 group-hover:bg-blue-400/20 transition-all duration-300 animate-glow" style={{
+                      animation: 'glow 2s ease-in-out infinite',
+                      animationPlayState: 'paused'
+                    }}></div>
+                  </div>
+                  <span className="text-lg relative z-10">@kodeitglobal</span>
+                  <ExternalLink className="ml-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 text-yellow-300 group-hover:animate-bounce-slow relative z-10" size={16} />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                 </a>
                 <a 
                   href="https://linkedin.com/company/kodeitglobal" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className={`flex items-center gap-2 hover:text-purple-600 transition-colors ${
-                    darkMode ? 'text-gray-400' : 'text-gray-600'
-                  }`}
+                  className="group flex items-center gap-3 text-white/90 hover:text-white transition-all duration-300 hover:translate-x-2 relative overflow-hidden"
+                  style={{
+                    animation: `fadeInUp ${1.4}s ease-out`
+                  }}
                 >
-                  <Globe size={18} />
-                  <span>LinkedIn</span>
-                  <ExternalLink size={14} className="opacity-60" />
+                  <div className="w-10 h-10 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 relative">
+                    <Globe className="text-white group-hover:text-blue-500 transition-all duration-300 group-hover:animate-rotate-slow relative z-10" size={18} style={{
+                      animation: 'rotate 18s linear infinite',
+                      animationPlayState: 'paused'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.animationPlayState = 'running';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.animationPlayState = 'paused';
+                    }} />
+                    <div className="absolute inset-0 rounded-lg bg-blue-500/0 group-hover:bg-blue-500/20 transition-all duration-300 animate-glow" style={{
+                      animation: 'glow 2s ease-in-out infinite',
+                      animationPlayState: 'paused'
+                    }}></div>
+                  </div>
+                  <span className="text-lg relative z-10">LinkedIn</span>
+                  <ExternalLink className="ml-auto opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 text-yellow-300 group-hover:animate-bounce-slow relative z-10" size={16} />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                 </a>
               </div>
             </div>
           </div>
 
-          <div className={`pt-8 border-t text-center ${
-            darkMode ? 'border-gray-800 text-gray-400' : 'border-gray-200 text-gray-600'
-          }`}>
-            <p>&copy; {new Date().getFullYear()} KODEIT. All rights reserved.</p>
+          {/* Bottom Bar */}
+          <div 
+            className="pt-8 border-t border-white/20 text-center relative"
+            style={{
+              animation: 'fadeInUp 1.4s ease-out'
+            }}
+          >
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <p className="text-white/80 text-base">
+                &copy; {new Date().getFullYear()} KODEIT. All rights reserved.
+              </p>
+              <div className="flex gap-6">
+                {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((item, idx) => (
+                  <a
+                    key={idx}
+                    href="#"
+                    className="text-white/70 hover:text-white transition-colors duration-300 relative group"
+                  >
+                    {item}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-300 group-hover:w-full transition-all duration-300"></span>
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </footer>
